@@ -4,7 +4,6 @@ from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy 
 from datetime import datetime
 from flask import send_from_directory
-import MySQLdb.cursors
 from flask import Flask, render_template, url_for, redirect
 from authlib.integrations.flask_client import OAuth
 app=Flask(__name__)
@@ -14,11 +13,6 @@ def hello_world():
 @app.route('/main')
 def hello():
     return render_template("index.html") 
-# app.config['MYSQL_HOST'] = 'localhost'
-# app.config['MYSQL_USER']='root'
-# app.config['MYSQL_PASSWORD']=''
-# app.config['MYSQL_DB']='login'
-# mysql=MySQL(app)
 @app.route('/py') 
 def python():
     return render_template("python.html")
@@ -68,35 +62,7 @@ def google_authorize():
     token = google.authorize_access_token()
     resp = google.get('userinfo').json()
     return render_template("index.html", data=resp['email'])           
-# @app.route('/login', methods =['GET', 'POST'])
-# def login():
-#     msg = ''
-#     if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
-#         username = request.form['username']
-#         password = request.form['password']
-#         cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-#         # cursor.execute('INSERT INTO login VALUES ( % s, % s)', (username, password))
-#         # mysql.connection.commit()
-#         cursor.execute('SELECT * FROM signin WHERE username = % s AND password = % s',(username, password,))
-#         fetchdata=cursor.fetchall()
-#         count=cursor.rowcount
-#         if (count==1):
-#                  return render_template("index.html",data=username)
-#         else:
-#             return(render_template("index.html",data="frist signup"))         
-# @app.route('/register', methods =['GET', 'POST'])
-# def register():
-#     msg=''
-#     if request.method == 'POST' and 'username' in request.form and 'password' in request.form :
-#         username = request.form['username']
-#         password = request.form['password']
-#         cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-#         cursor.execute('INSERT INTO signin VALUES (% s,% s)', (username, password))
-#         mysql.connection.commit()
-#         msg = username
-#         return render_template('index.html',data=msg) 
-#     elif request.method == 'POST':
-#         return render_template('index.html') 
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
 db = SQLAlchemy(app)
 class Blogpost(db.Model):
