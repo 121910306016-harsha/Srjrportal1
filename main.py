@@ -1,5 +1,4 @@
 from flask import Flask, render_template,request,url_for
-from flask_mysqldb import MySQL
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy 
 from datetime import datetime
