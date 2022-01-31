@@ -1,5 +1,5 @@
 Authlib==0.15.5
 Flask==2.0.2
-Flask_MySQLdb==0.2.0
 Flask_SQLAlchemy==2.5.1
 MySQL-python==1.2.5
+gunicorn
