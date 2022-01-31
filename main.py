@@ -97,7 +97,7 @@ def google_authorize():
 #         return render_template('index.html',data=msg) 
 #     elif request.method == 'POST':
 #         return render_template('index.html') 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:/Users/chint/OneDrive/Desktop/projects/Blogging-Website-using-Flask-main/blog.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
 db = SQLAlchemy(app)
 class Blogpost(db.Model):
     id = db.Column(db.Integer, primary_key=True)
