@@ -20,7 +20,7 @@ def c():
     return render_template("ds.html")
 @app.route('/dsa') 
 def dsa():
-    return render_template("dsa.html")
+    return render_template("DSA.html")
 @app.route('/dbms')    
 def dbms():
     return render_template("dbms.html")  
