@@ -1,13 +1,23 @@
 body{
     font-size:20px;
-    color:powderblue;
+    color:#352F44;
     font-family:Lora,'Times New Roman',serif
 }p{
     line-height:1.5;
     margin:30px 0
 }p a{text-decoration:underline}
+
 h1{
     color: rgba(0, 0, 0, 0.637) ;
+}
+.post-div{
+    border: #001c22;
+    border-radius: 2px;
+}
+.img-back{
+    background-image: url('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v546batch3-mynt-34-badgewatercolor_1.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=89288ef4b47127f7f34a5998b50e4470https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v546batch3-mynt-34-badgewatercolor_1.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=89288ef4b47127f7f34a5998b50e4470');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 h1,h2,h3,h4,h5,h6{
     font-weight:800;
@@ -79,9 +89,9 @@ h1,h2,h3,h4,h5,h6{
 
     @media only screen and (min-width:992px)
     {#mainNav{border-bottom:1px solid transparent;background:0 0}
-    #mainNav .navbar-brand{padding:15px 20px;color:#fff}
+    #mainNav .navbar-brand{padding:15px 20px;color:#352F44}
     #mainNav .navbar-brand:focus,#mainNav .navbar-brand:hover{color:rgba(255,255,255,.8)}
-    #mainNav .navbar-nav>li.nav-item>a{padding:15px 20px;color:#fff}
+    #mainNav .navbar-nav>li.nav-item>a{padding:15px 20px;color:#352F44}
     #mainNav .navbar-nav>li.nav-item>a:focus,#mainNav .navbar-nav>li.nav-item>a:hover{color:rgba(255,255,255,.8)}}
     
     @media only screen and (min-width:1170px)
@@ -92,8 +102,8 @@ h1,h2,h3,h4,h5,h6{
     #mainNav.is-fixed .navbar-nav>li.nav-item>a{color:#333}
     #mainNav.is-fixed .navbar-nav>li.nav-item>a:focus,#mainNav.is-fixed .navbar-nav>li.nav-item>a:hover{color:#0085a1}
     #mainNav.is-visible{-webkit-transform:translate3d(0,100%,0);-moz-transform:translate3d(0,100%,0);-ms-transform:translate3d(0,100%,0);-o-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}}
-    header.masthead{margin-bottom:50px;background:no-repeat center center;background-color:#777;background-attachment:scroll;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}
-    header.masthead .page-heading,header.masthead .post-heading,header.masthead .site-heading{padding:200px 0 150px;color:#fff}
+    header.masthead{margin-bottom:50px;background:no-repeat center center;background-attachment:scroll;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}
+    header.masthead .page-heading,header.masthead .post-heading,header.masthead .site-heading{padding:200px 0 150px;color:#5C5470}
     
     @media only screen and (min-width:768px)
     {header.masthead .page-heading,header.masthead .post-heading,header.masthead .site-heading{padding:200px 0}}
@@ -145,3 +155,4 @@ h1,h2,h3,h4,h5,h6{
     .btn-primary.disabled.focus,.btn-primary.disabled:focus,.btn-primary.disabled:hover,.btn-primary[disabled].focus,.btn-primary[disabled]:focus,.btn-primary[disabled]:hover,fieldset[disabled] .btn-primary.focus,fieldset[disabled] .btn-primary:focus,fieldset[disabled] .btn-primary:hover{border-color:#0085a1;background-color:#0085a1}
     .btn-primary .badge{color:#0085a1;background-color:#fff}.btn-lg{font-size:16px;padding:25px 35px}
     .btn-default:focus,.btn-default:hover{color:#fff;border:1px solid #0085a1;background-color:#0085a1}
+

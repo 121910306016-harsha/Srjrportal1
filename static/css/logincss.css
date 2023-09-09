@@ -17,7 +17,14 @@ body{
 	z-index: -1;
 }
 
+.google {
+	border-radius: 100%;
+}
+
 .container{
+	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2LXUV4CuzZJCxv01jiuAC1f--SvtXsVp0DGyT_GTjwNua4OFikhSNW-YbsjpVulmVIiM&usqp=CAU");
+	background-repeat: no-repeat;
+	background-size: cover;
     width: 100vw;
     height: 100vh;
     display: grid;

@@ -94,9 +94,28 @@ header .logo{
 
 
 }
+.visit-btn{
+  background-color: #6CB4EE;
+  border-radius: 5px;
+  width:300px;
+  /* height: 30px; */
+  font-size: 20px;
+  padding: 7px;
+  margin-bottom: 20px;
+}
+.visit-btn-2{
+  background-color: #4CAF50;
+  border-radius: 5px;
+  font-weight: 700;
+  width:300px;
+  /* height: 30px; */
+  font-size: 20px;
+  padding: 7px;
+  margin-bottom: 20px;
+}
 
 img{
-  width:7%;
+  width:10%;
   float:left;
 }
 

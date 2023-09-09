@@ -71,13 +71,12 @@ u{
 header{
 
 padding:1rem 6%;
-background:linear-gradient(90deg, grey , white);
-box-shadow: 0 .1rem .3rem rgba(0,0,0,.3);
+background-color: #ADC4CE;
 
 }
 .button {
-background-color:#4CAF50;
-border: 10px solid #4CAF50; /* Green */;
+background-color:#5C5470;
+border: 10px solid #5C5470; /* Green */;
 color: white;
 border-radius: 2px;
 text-align: center;

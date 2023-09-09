@@ -3,6 +3,7 @@ from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy 
 from datetime import datetime
 from flask import send_from_directory
+import lite # Replace 'some_module' with the actual module where Images is defined.
 from flask import Flask, render_template, url_for, redirect
 from authlib.integrations.flask_client import OAuth
 app=Flask(__name__)
@@ -62,15 +63,20 @@ def google_authorize():
     resp = google.get('userinfo').json()
     return render_template("index.html", data=resp['email'])           
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:/Users/chint/OneDrive/Desktop/university/Srjrportal1/blog.db'
 db = SQLAlchemy(app)
+
 class Blogpost(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(50))
     subtitle = db.Column(db.String(50))
     author = db.Column(db.String(20))
     date_posted = db.Column(db.DateTime)
-    content = db.Column(db.Text)            
+    content = db.Column(db.Text)  
+class Login(db.Model):
+       id = db.Column(db.Integer, primary_key=True)
+       username = db.Column(db.String(50))    
+       password=db.column(db.String(50))  
 @app.route('/b')
 def index():
     posts = Blogpost.query.order_by(Blogpost.date_posted.desc()).all()
@@ -93,16 +99,23 @@ def add():
 def delete():
     posts = Blogpost.query.order_by(Blogpost.date_posted.desc()).all()
     return render_template('delete.html', posts=posts)
-
+def readImage(img_name):
+   try:
+       fin = open(img_name, 'rb')
+       img = fin.read()
+       return img
+   except:
+       print("ERROR!!")
 @app.route('/addpost', methods=['POST'])
 def addpost():
     title = request.form['title']
     subtitle = request.form['subtitle']
     author = request.form['author']
     content = request.form['content']
-
+    # img_name = request.form['product_img']
+    # product_img = readImage(img_name)
+    # product_img_binary = lite.Binary(product_img)
     post = Blogpost(title=title, subtitle=subtitle, author=author, content=content, date_posted=datetime.now())
-
     db.session.add(post)
     db.session.commit()
 
